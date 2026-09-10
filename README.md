@@ -26,3 +26,7 @@
 検証: node test-game.cjs。0〜9、途中結果、二重判定防止、再接続、停止、権限拒否、クリアを模擬イベントで確認。390×844のブラウザ画面も確認。スマートフォン実機での音声遅延・連続認識は未検証です。
 
 公開先: https://liar0815.github.io/suuji-buster/ （v2）
+
+## アプリアイコン
+
+ゾンビの顔を使ったアイコンを設定しています。ブラウザのタブには `icon.svg`、iPhoneのホーム画面には `apple-touch-icon.png`、Androidなどのインストール用には `icon-192.png` と `icon-512.png` を使用します。画像を作り直す場合は `render-icons.ps1` を実行します。
