@@ -1,0 +1,50 @@
+/* Preserve the original palette while keeping the play controls within reach. */
+.brand{white-space:nowrap;display:flex;align-items:center}
+.toolbar{display:flex;align-items:center;gap:6px;flex-wrap:wrap;justify-content:flex-end}
+.quiet{min-height:44px;padding:8px 10px}
+.helper{color:#4e6354;font-size:13px;line-height:1.4;min-height:36px;margin:10px 0}
+.sub,.eyebrow,.bottom{color:#526851}
+.number{min-height:48px}
+.number:disabled{opacity:.55}
+body:has(dialog[open]){overflow:hidden}
+dialog{padding:20px;max-height:calc(100dvh - 32px);overflow:hidden}
+dialog[open]{display:flex;flex-direction:column}
+dialog h2{flex:none;margin:0 0 10px}
+.settings-content{overflow-y:auto;overscroll-behavior:contain;min-height:0;padding:0 4px}
+.settings-content p{margin:8px 0}
+.settings-content label{gap:8px;flex-wrap:wrap}
+.setting-note{color:#4e6354;font-size:12px}
+dialog select{min-height:44px;max-width:100%}
+dialog footer{flex:none;padding:4px 4px 8px;background:#fffdf6}
+dialog summary{cursor:pointer;min-height:44px;display:list-item;padding:10px 0;font-size:13px;font-weight:700}
+@media(max-width:420px){
+ .app{padding-top:12px}
+ header{flex-wrap:wrap;gap:4px 8px}
+ .brand{font-size:15px}
+ .brand .logo{width:28px;height:28px;margin-right:5px}
+ .toolbar{flex:1}
+ .quiet{font-size:11px;padding:6px 8px}
+}
+@media(max-width:360px){
+ header{justify-content:center}
+ .toolbar{flex-basis:100%;justify-content:center}
+ .brand{font-size:16px}
+}
+@media(max-height:700px){
+ .app{padding:8px 12px max(10px,env(safe-area-inset-bottom))}
+ .eyebrow,h1,.sub,.bottom{display:none}
+ header{margin-bottom:8px}
+ .scene{height:clamp(148px,calc(100dvh - 414px),270px);border-radius:24px}
+ .monster{width:100px;height:140px;left:calc(50% - 50px);bottom:4px}
+ .badge{width:47px;height:48px;left:28px;top:0;border-width:3px;border-radius:14px;font-size:34px}
+ .sun{width:32px;height:32px;top:18px;right:24px}
+ .cloud{font-size:38px;top:25px}
+ .scene-label{font-size:10px;left:12px;top:10px}
+ .status{margin:8px 0 4px;min-height:24px;font-size:16px}
+ .progress{margin-bottom:8px}
+ .primary{min-height:48px;padding:11px 8px;font-size:17px;border-radius:16px}
+ .helper{margin:8px 0;min-height:36px;font-size:12px}
+ .numbers{gap:6px;grid-template-columns:repeat(5,minmax(0,1fr))}
+ .number{height:48px;min-height:48px;font-size:26px;border-radius:13px}
+ .spark{top:44px}
+}
